@@ -3,14 +3,14 @@ apply plugin: 'com.github.ben-manes.versions'
 buildscript {
   ext.versions = [
       'minSdk': 14,
-      'compileSdk': 30,
+      'compileSdk': 35,
 
-      'kotlin': '1.5.21',
-      'autoService': '1.0-rc7',
+      'kotlin': '2.0.21',
+      'autoService': '1.1.1',
 
       // Update WrongTimberUsageDetectorTest#innerStringFormatWithStaticImport when >= 7.1.0-alpha07
-      'androidPlugin': '7.0.0',
-      'androidTools': '30.0.0',
+      'androidPlugin': '8.7.1',
+      'androidTools': '31.7.1',
   ]
 
   ext.deps = [
@@ -29,11 +29,11 @@ buildscript {
           'service': "com.google.auto.service:auto-service:${versions.autoService}",
           'serviceAnnotations': "com.google.auto.service:auto-service-annotations:${versions.autoService}",
       ],
-      annotations: 'org.jetbrains:annotations:20.1.0',
+      annotations: 'org.jetbrains:annotations:26.0.1',
 
       junit: 'junit:junit:4.13.2',
-      truth: 'com.google.truth:truth:1.1.2',
-      robolectric: 'org.robolectric:robolectric:4.6.1',
+      truth: 'com.google.truth:truth:1.4.4',
+      robolectric: 'org.robolectric:robolectric:4.13',
   ]
 
   repositories {
@@ -45,10 +45,10 @@ buildscript {
   dependencies {
     classpath deps.androidPlugin
     classpath deps.kotlin.plugin
-    classpath 'com.github.ben-manes:gradle-versions-plugin:0.39.0'
-    classpath 'me.champeau.gradle:japicmp-gradle-plugin:0.2.9'
-    classpath 'com.vanniktech:gradle-maven-publish-plugin:0.14.2'
-    classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.4.32'
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.51.0'
+    classpath 'me.champeau.gradle:japicmp-gradle-plugin:0.4.4'
+    classpath 'com.vanniktech:gradle-maven-publish-plugin:0.30.0'
+    classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.9.20'
   }
 }
 

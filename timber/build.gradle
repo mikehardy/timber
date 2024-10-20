@@ -5,6 +5,7 @@ apply plugin: 'org.jetbrains.dokka' // Must be applied here for publish plugin.
 
 android {
   compileSdkVersion versions.compileSdk
+  namespace "timber.log"
 
   defaultConfig {
     minSdkVersion versions.minSdk
@@ -14,6 +15,13 @@ android {
   lintOptions {
     textReport true
     textOutput 'stdout'
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+  kotlinOptions {
+    jvmTarget = '17'
   }
 }
 

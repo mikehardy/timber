@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 android {
   compileSdkVersion versions.compileSdk
 
+  namespace "com.example.timber"
+
   buildFeatures {
     buildConfig = true
     viewBinding = true
